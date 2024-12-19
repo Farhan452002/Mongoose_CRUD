@@ -2,16 +2,16 @@ const mongoose = require('mongoose');
 const { boolean } = require('webidl-conversions');
 
 
-const fruitSchema = new Mongoose.Schema({
+const fruitSchema = new mongoose.Schema({
     name: {
-        type: string,
+        type: String,
         required: true
     },
     color: {
-        type: string,
+        type: String,
         required: true
     },
-    readyToEat: boolean
+    readyToEat: Boolean
 });
 
 const Fruit = mongoose.model('Fruit',fruitSchema);
